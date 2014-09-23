@@ -1,0 +1,22 @@
+{
+  "name": "AcixsCP",
+  "version": "0.0.1",
+  "homepage": "https://github.com/mattwisniewski/AcixsCP",
+  "authors": [
+    "mattwisniewski <contact.mattdylan@gmail.com>"
+  ],
+  "description": "Acixs Control Panel",
+  "license": "Closed Source",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "~2.1.1",
+    "fontawesome": "~4.2.0",
+    "bootstrap": "~3.2.0"
+  }
+}
