@@ -19,3 +19,19 @@ Next we will load the needed front end dependancies with Bower, and run our init
 
 > bower install && grunt build
 
+
+---
+
+## Grunt Commands
+
+Strip: strip the package down by removing node_modules, bower components and other components that can be installed via our package managers. 
+
+> grunt strip
+
+Build: Build the package, ready to deploy.
+
+> grunt build
+
+Grunt: Build the package and run jshint
+
+> grunt
