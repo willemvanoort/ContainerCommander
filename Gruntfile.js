@@ -48,6 +48,11 @@ module.exports = function(grunt){
 		},
 		jshint: {
 			all: ['Gruntfile.js', 'dev/js/*.js', 'dev/js/*.*.js']
+		},
+		shell: {
+			target:{
+				command: 'rm -rf node_modules && rm -rf components'
+			}
 		}
 
 	});
