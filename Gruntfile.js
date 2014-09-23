@@ -28,6 +28,24 @@ module.exports = function(grunt){
 				]
 			}
 		},
+		uglify: {
+			target:{
+				files: {
+					'public/build/js/build.min.js': ['public/build/js/build.js']
+				}
+			}
+		},
+		cssmin:{
+			target: {
+				files: [{
+					expand: true,
+					cwd: 'public/build/css/',
+					src: ['*.css', '!*.min.css'],
+					dest: 'public/build/css/',
+					ext: '.min.css'
+				}]
+			}
+		},
 		jshint: {
 			all: ['Gruntfile.js', 'dev/js/*.js', 'dev/js/*.*.js']
 		}
@@ -42,7 +60,7 @@ module.exports = function(grunt){
 	grunt.loadNpmTasks('grunt-shell');
 	grunt.loadNpmTasks('grunt-contrib-copy');
 
-	grunt.registerTask('default', ['concat', 'copy', 'jshint']);
-	grunt.registerTask('build', ['concat', 'copy']);
+	grunt.registerTask('default', ['concat', 'copy', 'uglify', 'cssmin', 'jshint']);
+	grunt.registerTask('build', ['concat', 'copy', 'uglify', 'cssmin']);
 	grunt.registerTask('strip', ['shell']);
 };
