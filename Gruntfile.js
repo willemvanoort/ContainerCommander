@@ -59,6 +59,15 @@ module.exports = function(grunt){
 		jshint: {
 			all: ['Gruntfile.js', 'dev/js/*.js', 'dev/js/*.*.js']
 		},
+		watch: {
+			all:{
+				files: ['dev/css/*.scss', 'dev/js/*.js'],
+				tasks: ['sass', 'concat', 'copy', 'uglify', 'cssmin', 'shell:restart'],
+				options: {
+					spawn: false
+				}
+			}
+		},	
 		shell: {
 			strip:{
 				command: 'rm -rf node_modules && rm -rf components'
@@ -81,8 +90,9 @@ module.exports = function(grunt){
 	grunt.loadNpmTasks('grunt-shell');
 	grunt.loadNpmTasks('grunt-contrib-copy');
 	grunt.loadNpmTasks('grunt-contrib-sass');
+	grunt.loadNpmTasks('grunt-contrib-watch');
 
-	grunt.registerTask('default', ['sass', 'concat', 'copy', 'uglify', 'cssmin', 'jshint']);
+	grunt.registerTask('default', ['sass', 'concat', 'copy', 'uglify', 'cssmin', 'jshint', 'watch']);
 	grunt.registerTask('build', ['sass', 'concat', 'copy', 'uglify', 'cssmin']);
 	grunt.registerTask('strip', ['shell:strip']);
 	grunt.registerTask('start', ['shell:start']);
