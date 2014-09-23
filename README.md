@@ -6,7 +6,7 @@ Code copyright Matt Wisniewski <contact.mattdylan@gmail.com> until future notice
 
 ## Installation
 
-Shipyard requires you to have node installed on a Linux server. If you are unfimilliar with NodeJS learn more here: http://nodejs.org 
+Shipyard requires you to have Node, and Sass installed on a Linux server. If you are unfimilliar with NodeJS learn more here: http://nodejs.org 
 
 Shipyard also requires Bower and Grunt. Additionally we make use of forever, to avoid screening our application. Install them globally with the following command.
 

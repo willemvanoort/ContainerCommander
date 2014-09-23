@@ -46,6 +46,16 @@ module.exports = function(grunt){
 				}]
 			}
 		},
+		sass:{
+			dist:{
+				options:{
+					style: 'expanded'
+				},
+				files:{
+					'dev/css/main.css' : 'dev/css/main.scss'
+				}
+			},
+		},
 		jshint: {
 			all: ['Gruntfile.js', 'dev/js/*.js', 'dev/js/*.*.js']
 		},
@@ -70,11 +80,12 @@ module.exports = function(grunt){
 	grunt.loadNpmTasks('grunt-contrib-jshint');
 	grunt.loadNpmTasks('grunt-shell');
 	grunt.loadNpmTasks('grunt-contrib-copy');
+	grunt.loadNpmTasks('grunt-contrib-sass');
 
-	grunt.registerTask('default', ['concat', 'copy', 'uglify', 'cssmin', 'jshint']);
-	grunt.registerTask('build', ['concat', 'copy', 'uglify', 'cssmin']);
+	grunt.registerTask('default', ['sass', 'concat', 'copy', 'uglify', 'cssmin', 'jshint']);
+	grunt.registerTask('build', ['sass', 'concat', 'copy', 'uglify', 'cssmin']);
 	grunt.registerTask('strip', ['shell:strip']);
 	grunt.registerTask('start', ['shell:start']);
 	grunt.registerTask('stop', ['shell:stop']);
-
+	grunt.registerTask('restart', ['shell:stop', 'shell:start']);
 };

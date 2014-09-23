@@ -1,0 +1,21 @@
+@import url(http://fonts.googleapis.com/css?family=Ubuntu:400,700);
+
+$font-stack: 'Ubuntu', sans-serif;
+$background-color: #ccc;
+
+body, html{
+	background: $background-color;
+}
+
+.landing{
+	width: 400px;
+	content-align: center;
+	text-align: center;
+	margin: 0 auto;
+	text-shadow: 1px 1px 1px #fff;
+	font: $font-stack;
+	font-weight: bold;
+}
+#debug{
+	width:100%;
+}
