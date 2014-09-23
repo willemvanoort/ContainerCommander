@@ -1,8 +1,5 @@
 # Shipyard CP
-=======
-
 ## Shipyard CP, A Docker Controller.
-
 Code copyright Matt Wisniewski <contact.mattdylan@gmail.com> until future notice.
 
 ---
