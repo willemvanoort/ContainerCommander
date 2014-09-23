@@ -50,8 +50,14 @@ module.exports = function(grunt){
 			all: ['Gruntfile.js', 'dev/js/*.js', 'dev/js/*.*.js']
 		},
 		shell: {
-			target:{
+			strip:{
 				command: 'rm -rf node_modules && rm -rf components'
+			},
+			start:{
+				command: 'forever start app.js && echo "Shipyard is live!"'
+			},
+			stop:{
+				command: 'forever stop app.js && echo "Shipyard Stopped"'
 			}
 		}
 
@@ -67,5 +73,8 @@ module.exports = function(grunt){
 
 	grunt.registerTask('default', ['concat', 'copy', 'uglify', 'cssmin', 'jshint']);
 	grunt.registerTask('build', ['concat', 'copy', 'uglify', 'cssmin']);
-	grunt.registerTask('strip', ['shell']);
+	grunt.registerTask('strip', ['shell:strip']);
+	grunt.registerTask('start', ['shell:start']);
+	grunt.registerTask('stop', ['shell:stop']);
+
 };

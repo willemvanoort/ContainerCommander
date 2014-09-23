@@ -20,9 +20,13 @@ Next we will load the needed front end dependancies with Bower, and run our init
 > bower install && grunt build
 
 
+## Commands
+
 ---
 
-## Grunt Commands
+Start / Stop / Restart: Self explanitory
+
+> grunt (start/stop/restart)
 
 Strip: strip the package down by removing node_modules, bower components and other components that can be installed via our package managers. 
 
