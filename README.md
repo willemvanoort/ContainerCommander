@@ -16,6 +16,11 @@ Next we will load the needed front end dependancies with Bower, and run our init
 
 > bower install && grunt build
 
+Lets start Shipyard.
+
+> grunt start
+
+For the rest of the configuration, please follow the assisted setup by visiting http://localhost in your browser. Replace localhost if Shipyard is running remotely.
 
 ## Commands
 
