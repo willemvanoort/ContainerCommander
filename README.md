@@ -1,14 +1,14 @@
-# Shipyard CP
-## Shipyard CP, A Docker Controller.
+# Container Commander
+## Container Commander CP, A Docker Controller.
 Code copyright Matt Wisniewski <contact.mattdylan@gmail.com> until future notice.
 
 ---
 
 ## Installation
 
-Shipyard requires you to have Node, and Sass installed on a Linux server. If you are unfimilliar with NodeJS learn more here: http://nodejs.org 
+Container Commander requires you to have Node, and Sass installed on a Linux server. If you are unfimilliar with NodeJS learn more here: http://nodejs.org 
 
-Shipyard also requires Bower and Grunt. Additionally we make use of forever, to avoid screening our application. Install them globally with the following command.
+Container Commander also requires Bower and Grunt. Additionally we make use of forever, to avoid screening our application. Install them globally with the following command.
 
 > npm install -g grunt grunt-cli bower forever
 
@@ -20,11 +20,11 @@ Next we will load the needed front end dependancies with Bower, and run our init
 
 > bower install --allow-root && grunt build
 
-Lets start Shipyard.
+Lets start Container Commander.
 
 > grunt start
 
-For the rest of the configuration, please follow the assisted setup by visiting http://localhost in your browser. Replace localhost if Shipyard is running remotely.
+For the rest of the configuration, please follow the assisted setup by visiting http://localhost in your browser. Replace localhost if Container Commander is running remotely.
 
 ## Commands
 
