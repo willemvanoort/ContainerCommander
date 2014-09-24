@@ -73,10 +73,10 @@ module.exports = function(grunt){
 				command: 'rm -rf node_modules && rm -rf components'
 			},
 			start:{
-				command: 'forever start app.js && echo "Shipyard is live!"'
+				command: 'forever start app.js && echo "Container Commander is live!"'
 			},
 			stop:{
-				command: 'forever stop app.js && echo "Shipyard Stopped"'
+				command: 'forever stop app.js && echo "Container Commander Stopped"'
 			}
 		}
 
