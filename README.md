@@ -14,11 +14,11 @@ Container Commander also requires Bower and Grunt. Additionally we make use of f
 
 Next we will load the needed front end dependancies with Bower, and run our inital build script with grunt. 
 
-> bower install && grunt build
+> npm install && bower install && grunt build
 
 (If running as root do)
 
-> bower install --allow-root && grunt build
+> npm install && bower install --allow-root && grunt build
 
 Lets start Container Commander.
 
