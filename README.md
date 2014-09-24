@@ -10,11 +10,15 @@ Shipyard requires you to have Node, and Sass installed on a Linux server. If you
 
 Shipyard also requires Bower and Grunt. Additionally we make use of forever, to avoid screening our application. Install them globally with the following command.
 
-> npm install -g grunt bower forever
+> npm install -g grunt grunt-cli bower forever
 
-Next we will load the needed front end dependancies with Bower, and run our inital build script with grunt.
+Next we will load the needed front end dependancies with Bower, and run our inital build script with grunt. 
 
 > bower install && grunt build
+
+(If running as root do)
+
+> bower install --allow-root && grunt build
 
 Lets start Shipyard.
 
